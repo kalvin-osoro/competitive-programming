@@ -14,46 +14,25 @@ vector<string> split(const string &);
 
 void countSwaps(vector<int> a) {
 
-    // int swaps =0;
-    // int n = 600;
+   int n = a.size();
+   int numSwaps = 0;
 
-    // int arr[]={};
+   for (int i = 0; i < n; i++) {
 
-    // for(int i=0; i<=n; i++){
+    for (int j = 0; j < n - 1; j++) {
+        // Swap adjacent elements if they are in decreasing order
+        if (a[j] > a[j + 1]) {
+            swap(a[j], a[j + 1]);
 
-    //    cin>>arr[i];
-    // }
-    // for (int i=0; i<= 600; i++){
-    //     for (int j = 0; j <n-1; j++){
-
-    //         if(a[j]> a[j+1]){
-
-    //             swaps++;
-    //             swap(a[j], a[j+1]);
-    //         }
-    //     }
-    // }
-    // cout<<"Array is sorted in "<< swaps<< " swaps."<<endl;
-    // cout<<"First Element: "<<a[0]<<endl;
-    // cout<<"Last Element: "<<a[n - 1]<<endl;
-    int swap = 0;
-
-    for(int i = 0; i < a.size(); i++){
-        int flag = 0;
-        for(int j = 1; j < a.size() - i; j++){
-            if(a[j] < a[j - 1]){
-                swap++;
-                int t = a[j];
-                a[j] = a[j - 1];
-                a[j - 1] = t;
-                flag = 1;
-            }
+            numSwaps++;
         }
-        if(!flag) break;
     }
-    cout<<"Array is sorted in "<<swap<<" swaps."<<endl;
-    cout<<"First Element: "<<a[0]<<endl;
-    cout<<"Last Element: "<<a[a.size() - 1]<<endl;
+
+}
+cout << "Array is sorted in "<< numSwaps<< " swaps."<<endl;
+cout << "First Element: "<< a[0]<< endl;
+cout << "Last Element: "<< a[n-1]<< endl;
+
 
 }
 
