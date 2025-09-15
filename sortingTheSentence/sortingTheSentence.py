@@ -8,9 +8,5 @@ class Solution:
         i = s.split(' ')
 
         k = len(i)
-
-        
-
         print (i)
-       
-        
+    
