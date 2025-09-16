@@ -1,12 +1,14 @@
 class Solution:
     def sortSentence(self, s: str) -> str:
 
-        #iterate through the sentence
-        #separate the sentence into words by after each space
-        #get the last indexed item in each word and take note of the no
-        # rearrange te sentence using the numbers in ascending order
-        i = s.split(' ')
-
-        k = len(i)
-        print (i)
-    
+       #split the sentence into an array of strings
+       #obtain the last index and convert into an integer
+       #sort based on the integer value 
+       #bring the strings together
+        word_list = s.split()
+        ans = []
+        for i in word_list:
+            ele_idx = int(i[-1])
+            ans.insert(ele_idx-1,i[:-1])
+        result = ' '.join(ans)
+        return result
