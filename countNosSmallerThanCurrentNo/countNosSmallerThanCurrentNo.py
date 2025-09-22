@@ -7,6 +7,8 @@ class Solution:
             if n not in dict:
                 dict[n] = i
         return [dict[n] for n in nums]
+    
+    # https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/submissions/1779483260/
 
 
 # 1365. How Many Numbers Are Smaller Than the Current Number
