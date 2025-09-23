@@ -14,7 +14,9 @@ class Solution:
                     
                     # above solution is bubble sort, not efficient especially for large arrays
                     
-                    # use Dutch national Flag algo to sort it 
+                    # use Dutch national Flag algo to sort it  for 3 categories
+                    
+                    #otherwise use counting sort to solve it
                     
                     
                     
